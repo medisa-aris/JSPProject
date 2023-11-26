@@ -20,14 +20,8 @@ jobs:
         run: mkdir -p /home/runner/work/JSPProject/JSPProject/output/war
       - name: Check directory
         run: pwd 
-      - name: Change Directory
-        run: cd WebContent
-      - name: Listing directory
-        run: ls -larth 
       - name: Create war
-        run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war *
-      - name: Change Directory
-        run: cd /home/runner/work/JSPProject/JSPProject/JSPProject
+        run: cd WebContent; jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war *
       - name: Listing war
         run: ls -larth output/war/
       - name: Deploy the package to the remote server
