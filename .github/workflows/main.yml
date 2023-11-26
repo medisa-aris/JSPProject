@@ -1,7 +1,7 @@
 name: Checkout and create war
 on: push
 env:
-  JAVA_VERSION: '1.8' # set this to the java version to use
+  JAVA_VERSION: '1.8' 
   HOST: '68.183.229.196'
   SSH_USER: 'medisagi'
   SSH_PASSWORD: 'Training123Tomcat'
