@@ -9,7 +9,7 @@
 <body>
 
 <h1>Hello World</h1>
-<h2>This is medisa speaking, lets write alot of application using this one.</h2>
+<h2>This is new for CR001</h2>
 <a href="other1.jsp">Link to other page</a>
 
 </body>
