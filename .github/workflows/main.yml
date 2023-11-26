@@ -21,11 +21,13 @@ jobs:
       - name: Listing directory
         run: ls -larth 
       - name: Change Directory
-        run: cd WebContent
+        run: cd /home/runner/work/JSPProject/JSPProject/JSPProject/WebContent
+      - name: Listing directory
+        run: ls -larth 
       - name: Create war
         run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war *
       - name: Change Directory
-        run: cd ..
+        run: cd /home/runner/work/JSPProject/JSPProject/JSPProject
       - name: Listing war
         run: ls -larth output/war/
       - name: Deploy the package to the remote server
