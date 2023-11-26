@@ -1,5 +1,7 @@
 name: Checkout and create war
 on: push
+env:
+  JAVA_VERSION: '1.8' # set this to the java version to use
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -7,3 +9,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: master
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+      - name: Create directory if not exist
+        run: mkdir -p /home/runner/work/JSPProject/JSPProject/output/war
+      - name: Create war
+        run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war /home/runner/work/JSPProject/JSPProject/WebContent/*
+      - name: Listing war
+        run: ls -larth /home/runner/work/JSPProject/JSPProject/output/war/app.war
+        
