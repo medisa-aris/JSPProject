@@ -1,0 +1,9 @@
+name: Checkout and create war
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
