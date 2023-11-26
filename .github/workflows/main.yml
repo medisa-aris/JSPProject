@@ -18,10 +18,10 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
       - name: Create directory if not exist
         run: mkdir -p /home/runner/work/JSPProject/JSPProject/output/war
-      - name: Listing directory
-        run: ls -larth 
+      - name: Check directory
+        run: pwd 
       - name: Change Directory
-        run: cd /home/runner/work/JSPProject/JSPProject/JSPProject/WebContent
+        run: cd WebContent
       - name: Listing directory
         run: ls -larth 
       - name: Create war
