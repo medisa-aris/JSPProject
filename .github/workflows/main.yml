@@ -18,7 +18,7 @@ jobs:
       - name: Listing directory
         run: ls -larth 
       - name: Create war
-        run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war /home/runner/work/JSPProject/JSPProject/src/WebContent/*
+        run: jar -cvf output/war/app.war WebContent/*
       - name: Listing war
-        run: ls -larth /home/runner/work/JSPProject/JSPProject/output/war/app.war
+        run: ls -larth output/war/
         
