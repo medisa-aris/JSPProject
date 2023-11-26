@@ -23,7 +23,7 @@ jobs:
       - name: Change Directory
         run: cd WebContent
       - name: Create war
-        run: jar -cvf ../output/war/app.war *
+        run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war *
       - name: Change Directory
         run: cd ..
       - name: Listing war
