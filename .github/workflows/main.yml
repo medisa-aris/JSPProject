@@ -2,6 +2,9 @@ name: Checkout and create war
 on: push
 env:
   JAVA_VERSION: '1.8' # set this to the java version to use
+  HOST: '68.183.229.196'
+  SSH_USER: 'medisagi'
+  SSH_PASSWORD: 'Training123Tomcat'
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -21,4 +24,12 @@ jobs:
         run: jar -cvf output/war/app.war WebContent/*
       - name: Listing war
         run: ls -larth output/war/
+      - name: Deploy the package to the remote server
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: output/war/app.war
+          remote: /home/medisagi/apache-tomcat-8.5.96/webapps/app.war
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
         
