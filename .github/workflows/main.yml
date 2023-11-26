@@ -16,7 +16,7 @@ jobs:
       - name: Create directory if not exist
         run: mkdir -p /home/runner/work/JSPProject/JSPProject/output/war
       - name: Create war
-        run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war /home/runner/work/JSPProject/JSPProject/WebContent/*
+        run: jar -cvf /home/runner/work/JSPProject/JSPProject/output/war/app.war /home/runner/work/JSPProject/JSPProject/src/WebContent/*
       - name: Listing war
         run: ls -larth /home/runner/work/JSPProject/JSPProject/output/war/app.war
         
